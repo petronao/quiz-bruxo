@@ -45,7 +45,7 @@ export default function App() {
       
       // ❌ SE ERROU ALGO: Força a repetição do MESMO bloco
       if (cometeuErro) {
-        alert("⚠️ Você cometeu erros neste bloco. Vamos repetir as mesmas 10 palavras para fixar bem!");
+        //alert("⚠️ Você cometeu erros neste bloco. Vamos repetir as mesmas 10 palavras para fixar bem!");
         setListaRestante([...blocoDeDez]);
         setAcertosNoBloco(0);
         setErrouNoBloco(false);
@@ -53,7 +53,7 @@ export default function App() {
       } 
       // 🏆 SE GABARITOU: Avança para as próximas 10 palavras
       else {
-        alert("🔥 Perfeito! Zero erros. Seu cérebro fixou essas 10! Avançando para o próximo bloco...");
+        //alert("🔥 Perfeito! Zero erros. Seu cérebro fixou essas 10! Avançando para o próximo bloco...");
         const proximoIndice = indiceAtual + 10;
         
         // Se ainda restarem palavras no banco de dados completo
@@ -66,7 +66,7 @@ export default function App() {
           setErrouNoBloco(false);
           gerarNovaPergunta(proximoBloco, proximoBloco, totalDoTema, proximoIndice, false);
         } else {
-          alert("🏆 INCRÍVEL! Você devorou todos os blocos deste tema com perfeição!");
+          //alert("🏆 INCRÍVEL! Você devorou todos os blocos deste tema com perfeição!");
           setTelaAtual('menu');
         }
       }
@@ -91,7 +91,7 @@ export default function App() {
 
   const checarResposta = (opcaoSelecionada) => {
     if (opcaoSelecionada === perguntaAtual.portugues) {
-      alert("Correto! 🎉");
+     // alert("Correto! 🎉");
       const novaListaRestante = listaRestante.filter(item => item.id !== perguntaAtual.id);
       setListaRestante(novaListaRestante);
       setAcertosNoBloco(acertosNoBloco + 1);
@@ -99,7 +99,7 @@ export default function App() {
       // Passa o estado atualizado de erros para a próxima rodada
       gerarNovaPergunta(novaListaRestante, blocoAtual, bancoCompleto, ponteiroBloco, errouNoBloco);
     } else {
-      alert(`Errado! ❌\nA tradução correta era: ${perguntaAtual.portugues}`);
+      //alert(`Errado! ❌\nA tradução correta era: ${perguntaAtual.portugues}`);
       setErrouNoBloco(true); // Marca que o bloco atual está "sujo" e vai ter que repetir
     }
   };
