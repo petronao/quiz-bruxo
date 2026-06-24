@@ -3,13 +3,29 @@
     "name": "quiz-bruxo",
     "slug": "quiz-bruxo",
     "version": "1.0.0",
-"platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "web": {
       "bundler": "metro"
     },
     "userInterfaceStyle": "light",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fe4cdd08-a319-451a-a8cc-682e4c0a9046"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fe4cdd08-a319-451a-a8cc-682e4c0a9046"
+    },
+    "android": {},
+    "ios": {}
   }
 }
